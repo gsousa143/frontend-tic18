@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AtendimentoFormComponent } from './atendimento-form/atendimento-form.component';
 import { ListarAtendimentoComponent } from './listar-atendimento/listar-atendimento.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

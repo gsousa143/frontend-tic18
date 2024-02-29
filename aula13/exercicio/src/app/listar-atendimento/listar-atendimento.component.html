@@ -1,3 +1,20 @@
+<div class="listarAtendimentos-conteiner">
+    <button (click)="listaAtendimento()"> LISTAR ATENDIMENTOS</button>
 
-<button (click)="listaAtendimento()"> LISTAR ATENDIMENTOS</button>
+    <div class="lista-conteiner">
+        <ul>
+            <li *ngFor="let atendimento of atendimentos; let i =index">
+                <p>NOME: {{atendimento.nome}}</p>
+                <p>EMAIL: {{atendimento.email}}</p>
+                <p>TIPO DE ATENDIMENTO: {{atendimento.tipo}}</p>
+                <P> VALOR DO ATENDIMENTO: {{atendimento.valor}} R$</P>
+                <button *ngIf="!mostrarDetalhes" (click)="mostrarDetalhesAtendimento(i)">MOSTRA DETALHES</button>
+                <p *ngIf="mostrarDetalhes">OBSERVAÇÕES: {{atendimento.obs}}</p>
+                <button> EDITAR ATENDIMENTO</button>
+                <button (click)="apagaAtendimento(atendimento.id)"> DELETAR ATENDIMENTO</button>
+            </li>
+        </ul>
+        <p *ngIf="atendimentos.length==0"> NÃO HÁ ATENDIMENTOS CADASTRADOS</p>
+    </div>
+</div>
 
