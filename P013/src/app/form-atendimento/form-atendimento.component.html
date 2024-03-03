@@ -1,0 +1,66 @@
+<div class="formConteiner">
+            
+            <form class="formCadastro" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+                <h2> Cadastro de Atendimento</h2>
+                <mat-form-field class="username">
+                    <label>NOME DE USUARIO:</label>
+                    <input matInput formControlName="username">
+                </mat-form-field>
+          
+                <mat-form-field class="senha">
+                    <label>SENHA:</label>
+                    <input matInput formControlName="senha" type="password">
+                </mat-form-field>
+            
+                <mat-form-field class="email">
+                    <label>EMAIL:</label>
+                    <input matInput formControlName="email" type="email">
+                </mat-form-field>
+          
+                <mat-form-field class="nome">
+                    <label>NOME COMPLETO:</label>
+                    <input matInput formControlName="nome">
+                </mat-form-field>
+          
+                <mat-form-field class="telefone">
+                    <label>TELEFONE:</label>
+                    <input matInput formControlName="telefone">
+                </mat-form-field>
+          
+                <mat-form-field class="endereco">
+                    <label>ENDEREÇO:</label>
+                    <input matInput formControlName="endereco">
+                </mat-form-field>
+          
+                <mat-form-field class="dataNascimento">
+                    <label>DATA DE NASCIMENTO:</label>
+                    <input matInput formControlName="dataNascimento" type="date">
+                </mat-form-field>
+                  
+                <mat-form-field class="servicos">
+                    <mat-label>SERVIÇOS:</mat-label>
+                    <mat-select formControlName="servicos" multiple>
+                      <mat-option value="compras">Compras</mat-option>
+                      <mat-option value="banho">Banho</mat-option>
+                      <mat-option value="escovacao">Escovação</mat-option>
+                      <mat-option value="tosa">Tosa</mat-option>
+                      <mat-option value="creche">Creche</mat-option>
+                      <mat-option value="consulta">Consulta</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+        
+                  <mat-form-field class="valor">
+                    <label>VALOR (R$):</label>
+                    <input matInput formControlName="valor">
+                </mat-form-field>
+        
+        
+                <mat-form-field class="observacoes">
+                    <label>OBSERVAÇÕES:</label>
+                    <input matInput formControlName="observacoes">
+                </mat-form-field>
+          
+                <button mat-stroked-button type="submit">SUBMIT</button>
+            </form>
+    
+  </div>

@@ -1,0 +1,11 @@
+.botoesConteiner{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    gap: 40px;
+
+}
+
+.botoesConteiner > button{
+    height: 100px;
+}

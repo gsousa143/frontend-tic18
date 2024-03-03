@@ -1,0 +1,23 @@
+.lista{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listaConteiner{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    padding: 20px;
+    gap:5%;
+}
+
+.listaBotoes{
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+}
+
+p{
+    word-wrap: break-word;
+}

@@ -1,0 +1,38 @@
+<div class="form-container">
+    <div class="titulo">
+      <h1>Formulario adicionar Carro</h1>
+    </div>
+    <form class="formCarro" (ngSubmit)="onSubmit(formulario)" #formulario="ngForm">
+      <label class="modelo"> 
+        MODELO: 
+        <input name="modelo" ngModel>
+      </label>
+      <label class="marca">
+        MARCA:  
+        <input name="marca" ngModel>
+      </label>
+  
+      <label class="ano">
+        ANO:  
+        <input name="ano" ngModel>
+      </label>
+  
+      <label class="valor">
+        VALOR:  
+        <input name="valor" ngModel>
+      </label>
+      
+      <label class="cor">
+        COR:  
+        <input name="cor" ngModel>
+      </label>
+      
+      <label class="imagem">
+        IMAGEM: 
+        <input name="imagem" ngModel>
+      </label>
+
+      <button type="submit">ADICIONAR CARRO</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,14 @@
+.listaCarros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-evenly;
+    gap: 5px;
+    background-color: cadetblue;   
+}
+
+.listaCarros > img{
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
+}

@@ -1,0 +1,24 @@
+h2, h5{
+    color:goldenrod
+}
+
+
+.Roupas, .moveis{
+    color:blue;
+}
+
+li{
+    color:orangered
+}
+
+.usada{
+    color:blueviolet
+}
+
+.moveis .usada {
+    color:chartreuse
+}
+
+.alimentos{
+    color:aqua;
+}

@@ -1,0 +1,18 @@
+<div class="listaConteiner">
+    <mat-list *ngFor="let atendimento of atendimentos; let i = index" class="lista">
+        <mat-list-item ><strong>Nome do usuario:</strong> <p>{{ atendimento.username }}</p></mat-list-item>
+        <mat-list-item ><strong>Endereço:</strong> <p>{{ atendimento.endereco }}</p></mat-list-item>
+        <mat-list-item *ngFor="let servico of atendimento.servicos"><strong>Serviço:</strong> <p>{{ servico }}</p></mat-list-item>
+        <mat-list-item><strong>Valor:</strong> <p>{{ atendimento.valor }} R$</p></mat-list-item>
+
+        <mat-list-item *ngIf="detalhesVisiveis[i]"><strong>Nome:</strong> <p>{{ atendimento.nome }}</p></mat-list-item>
+        <mat-list-item *ngIf="detalhesVisiveis[i]"><strong>Email:</strong> <p>{{ atendimento.email }}</p></mat-list-item>
+        <mat-list-item *ngIf="detalhesVisiveis[i]"><strong>Telefone:</strong> <p>{{ atendimento.telefone }}</p></mat-list-item>
+        <mat-list-item *ngIf="detalhesVisiveis[i]"><strong>Data de Nascimento:</strong> <p>{{ atendimento.dataNascimento | date }}</p></mat-list-item>
+        <mat-list-item *ngIf="detalhesVisiveis[i]"><strong>Observações:</strong> <p>{{ atendimento.observacoes }}</p></mat-list-item>
+        <mat-list class="listaBotoes">
+            <button mat-stroked-button (click)="alteraDetalhes(i)">DETALHAR</button>
+            <button mat-stroked-button (click)="editaAtendimento(atendimento.id)">EDITAR</button>
+        </mat-list>
+    </mat-list>
+  </div>
