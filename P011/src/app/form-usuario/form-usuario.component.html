@@ -35,26 +35,28 @@
             <label>DATA DE NASCIMENTO:</label>
             <input matInput formControlName="dataNascimento" type="date">
         </mat-form-field>
-  
-        <mat-form-field class="genero">
-            <label>GÊNERO:</label>
-            <mat-radio-group formControlName="genero">
-                <mat-radio-button value="masculino">Masculino</mat-radio-button>
-                <mat-radio-button value="feminino">Feminino</mat-radio-button>
-                <mat-radio-button value="outro">Outro</mat-radio-button>
-            </mat-radio-group>
-        </mat-form-field>
-        
-        <mat-form-field class="profissao">
-            <label>PROFISSÃO:</label>
-            <mat-radio-group formControlName="profissao">
-                <mat-radio-button value="engenheiro">Engenheiro</mat-radio-button>
-                <mat-radio-button value="professor">Professor</mat-radio-button>
-                <mat-radio-button value="mecanico">Mecânico</mat-radio-button>
-                <mat-radio-button value="medico">Médico</mat-radio-button>
-                <mat-radio-button value="motorista">Motorista</mat-radio-button>
-            </mat-radio-group>
-        </mat-form-field>
+
+
+
+        <mat-form-field class="genero" >
+            <mat-label>GÊNERO:</mat-label>
+            <mat-select formControlName="genero">
+              <mat-option value="masculino">Masculino</mat-option>
+              <mat-option value="feminino">Feminino</mat-option>
+              <mat-option value="outro">Outro</mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+          <mat-form-field class="profissao" >
+            <mat-label>PROFISSÃO:</mat-label>
+            <mat-select formControlName="profissao">
+              <mat-option value="engenheiro">Engenheiro</mat-option>
+              <mat-option value="professor">Professor</mat-option>
+              <mat-option value="mecanico">Mecânico</mat-option>
+              <mat-option value="medico">Médico</mat-option>
+              <mat-option value="motorista">Motorista</mat-option>
+            </mat-select>
+          </mat-form-field>
   
         <button mat-raised-button type="submit">SUBMIT</button>
     </form>

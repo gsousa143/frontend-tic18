@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { FormUsuarioComponent } from './form-usuario/form-usuario.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatInputModule } from '@angular/material/input';
-import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 
@@ -17,7 +17,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   ],
   imports: [
     MatInputModule,
-    MatRadioModule,
+    MatSelectModule,
     MatFormFieldModule,
     ReactiveFormsModule,
     BrowserModule,
