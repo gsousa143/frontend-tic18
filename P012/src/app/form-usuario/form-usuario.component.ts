@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { RastreiaService } from '../rastreia.service';
 
 @Component({
   selector: 'app-form-usuario',
@@ -9,9 +10,10 @@ import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/fo
 export class FormUsuarioComponent implements OnInit {
   formulario!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private rastreiaService: RastreiaService) { }
 
   ngOnInit(): void {
+
     this.formulario = this.formBuilder.group({
       username: ['', [Validators.required, Validators.maxLength(12), Validators.pattern(/^\S*$/)]],
       senha: ['', [Validators.required, Validators.minLength(4), Validators.pattern(/^(?=.*[A-Z])(?=.*\W)/)]],
@@ -23,6 +25,10 @@ export class FormUsuarioComponent implements OnInit {
       genero: ['', [Validators.required]],
       profissao: ['', [Validators.required]]
     });
+
+    this.rastreiaService.rastreiaValor(this.formulario);
+    this.rastreiaService.rastriaStatus(this.formulario);
+
   }
 
   validarDataNascimento(control: AbstractControl) {

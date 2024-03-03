@@ -8,12 +8,14 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { RastreiaComponent } from './rastreia/rastreia.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormUsuarioComponent
+    FormUsuarioComponent,
+    RastreiaComponent
   ],
   imports: [
     MatInputModule,
